@@ -8,6 +8,11 @@ import { CompWithJSX } from './components/JSX';
 import { CompWithoutJSX } from './components/JSX';
 import { PropsFunc } from './components/props';
 import { PropsClass } from './components/props';
+import { State } from './components/compState';
+import { Counter } from './components/compState';
+import { FuncClickEvent } from './components/eventHandling';
+import { ClassClickEvent } from './components/eventHandling';
+import { ParentComp } from './components/methodsProps-ParentComp';
 
 function App() {
   return (
@@ -39,6 +44,21 @@ function App() {
         <br></br>
         <span>This is children of Gilgamesh.</span>
       </PropsClass>
+
+      <hr></hr>
+
+      {/* State */}
+      <State name={'KillerBee'} heroName={'Jinchuriki'} data={7}></State>
+      <Counter/>
+
+      <hr></hr>
+
+      {/* Event Handling */}
+      <FuncClickEvent/>
+      <ClassClickEvent/>
+
+      <hr></hr>
+      <ParentComp/>
 
     </div>
   );
