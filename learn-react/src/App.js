@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 
@@ -13,6 +12,10 @@ import { Counter } from './components/compState';
 import { FuncClickEvent } from './components/eventHandling';
 import { ClassClickEvent } from './components/eventHandling';
 import { ParentComp } from './components/methodsProps-ParentComp';
+import { ElementVariable, IfELseRendering, ShortCktOperator, TernaryConditionalOperator } from './components/compRendering';
+import { ListKeyValuePair, ListRendering } from './components/listRendering';
+import { InLine, StyleSheets } from './components/styleComp';
+import styles from './components/style.module.css'
 
 function App() {
   return (
@@ -24,14 +27,12 @@ function App() {
       <ClassComp></ClassComp>
 
       <hr></hr>
-
       {/* Component using JSX */}
       <CompWithJSX></CompWithJSX>
       {/* Component without using JSX */}
       <CompWithoutJSX></CompWithoutJSX>
 
       <hr></hr>
-      
       {/* Props - functional comp */}
       <PropsFunc name='Samrat' heroName='Batman'/>
       <PropsFunc name='Ubermensch' heroName='Superman'>
@@ -46,19 +47,37 @@ function App() {
       </PropsClass>
 
       <hr></hr>
-
       {/* State */}
       <State name={'KillerBee'} heroName={'Jinchuriki'} data={7}></State>
       <Counter/>
 
       <hr></hr>
-
       {/* Event Handling */}
       <FuncClickEvent/>
       <ClassClickEvent/>
+      
+      <hr></hr>
+      
+      {/* Methods props */}
+      <ParentComp/>
 
       <hr></hr>
-      <ParentComp/>
+      {/* Conditional Rendering */}
+      <IfELseRendering/>
+      <ElementVariable/>
+      <TernaryConditionalOperator/>
+      <ShortCktOperator/>
+
+      <hr></hr>
+      {/* List Rendering */}
+      <ListRendering/>
+      <ListKeyValuePair/>
+
+      <hr></hr>
+      {/* Styling react components */}
+      <StyleSheets primary={true}/>
+      <InLine/>
+      <div className={`${styles.primary} ${styles.bold}`}>CSS Module</div>
 
     </div>
   );
