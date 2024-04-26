@@ -1,5 +1,12 @@
 import React, { Component } from 'react'
-import { ChildComp } from './methodsProps-ChildComp'
+
+function ChildComp(props) {
+    return (
+      <div>
+          <button onClick={() => props.greetHandler('Child')}>Greet Parent</button>
+      </div>
+    )
+  }
 
 export class ParentComp extends Component {
     constructor(props){
