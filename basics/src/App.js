@@ -24,6 +24,12 @@ import { ParentComponentClass } from './components/pureComp';
 import { ParentComponentFunc } from './components/memoComp';
 import { Refs } from './components/refs';
 import { RefsClass } from './components/refsClass';
+import { ForwardRefs } from './components/forwardRefs';
+import { PortalDemo } from './components/portals';
+import { ErrorBoundary, Hero } from './components/errorBoundary';
+import { ComponentA, UserProvider } from './components/contexts';
+import { HttpGET } from './components/httpGET';
+import { HttpPost } from './components/httpPost';
 
 function App() {
   return (
@@ -119,6 +125,37 @@ function App() {
       <hr/>
       {/* Passing refs between classes */}
       <RefsClass/>
+
+      <hr/>
+      {/* Forwarding Refs */}
+      <ForwardRefs/>
+
+      {/* <hr/> */}
+      {/* Portals */}
+      <PortalDemo/>
+
+      <hr/>
+      {/* Error handling */}
+      <ErrorBoundary>
+        <Hero heroName={'Batman'}/>
+        {/* <Hero heroName={'Joker'}/> */}
+      </ErrorBoundary>
+
+      <hr/>
+      {/* Context */}
+      <UserProvider value={'Samrat'}>
+        <ComponentA/>
+      </UserProvider>
+
+      <hr/>
+      {/* HTTP GET request */}
+      <HttpGET/>
+
+      <hr/>
+      {/* HTTP POST request */}
+      <HttpPost/>
+
+
 
 
       <hr/>
